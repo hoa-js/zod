@@ -12,7 +12,8 @@ export function zodValidator (schemas, options = {}) {
     throw new TypeError('schemas should be an object')
   }
 
-  for (const key of Object.keys(schemas)) {
+  const keys = Object.keys(schemas)
+  for (const key of keys) {
     const schema = schemas[key]
     if (!schema || typeof schema.safeParseAsync !== 'function') {
       throw new TypeError(`Schema for "${key}" must be a Zod schema`)
@@ -20,7 +21,7 @@ export function zodValidator (schemas, options = {}) {
   }
 
   return async function zodMiddleware (ctx, next) {
-    for (const key of Object.keys(schemas)) {
+    for (const key of keys) {
       const schema = schemas[key]
       const value = ctx.req[key]
 

@@ -21,7 +21,7 @@ importers:
         specifier: 16.4.0
         version: 16.4.0
       hoa:
-        specifier: ^0.2.0
+        specifier: '*'
         version: 0.2.0
       husky:
         specifier: 9.1.7
@@ -36,7 +36,7 @@ importers:
         specifier: 8.5.0
         version: 8.5.0(jiti@2.6.1)(postcss@8.5.6)(typescript@5.9.2)
       zod:
-        specifier: ^4.1.12
+        specifier: ^4
         version: 4.1.12
 
 packages:
